@@ -19,15 +19,49 @@
     }
 
     .nav{
-      width: 100px;
+      width: 25%;
       min-height: 100vh;
       display: flex;
-      background-color: rgb(154, 200, 243);
+      background-color: rgb(255, 255, 255);
+      align-items: flex-start;
+      justify-content: center;
+      padding: 70px;
     }
 
     .nav-text{
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
+      transform: rotate(90deg);
+      font-weight: bold;
+      font-size: 125%;
+    }
+
+    .main{
+      background-color: rgb(231, 226, 226);
+      flex: 1;
+    }
+
+    .main-header{
+      font-size: 125%;
+      font-weight: bold;
+      padding: 20px;
+      padding-top: 50px;
+    }
+
+    .main-content{
+      font-size: 100%;
+      padding: 20px;
+      min-height: 80%;
+    }
+
+    .footer{
+      background: rgb(61, 59, 59);
+      padding: 40px 50px;
+      min-height: 250px;
+      align-items: flex-end;
+    }
+
+    .footer-text{
+      font-size: 125%;
+      font-weight: bolder;
     }
 
   </style>
@@ -36,5 +70,11 @@
   <div class="nav">
     <div class="nav-text"> Navigation</div>
   </div>
+  <div class="main">
+    <div class="main-header">Main Content</div>
+    <div class="main-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu arcu vel nibh iaculis blandit. Vivamus diam elit, scelerisque ut tristique vitae, facilisis ac orci. Mauris ut semper nulla. Quisque laoreet egestas risus, a eleifend neque fringilla non. Integer fringilla risus ac laoreet sodales. Nam fermentum urna et tortor sollicitudin venenatis.</div>
+    <div class="footer">
+      <div class="footer-text">Footer</div>
+    </div>
 </body>
 </html> 
