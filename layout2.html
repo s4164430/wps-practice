@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 2</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      display: grid;
+      margin: 0;
+      grid-template-rows: auto 1fr auto; 
+      grid-template-columns: 200px 1fr 200px;
+      height: 100vh;
+      grid-template-areas: 
+        "header header header"
+        "nav article aside"
+        "footer footer footer";
+    }
+
+    .header{
+      grid-area: header;
+      background: rgb(103, 101, 101);
+      padding: 1em;
+      font-size: 100%;
+    }
+
+    .main-container{
+      display: grid;
+      grid-template-columns: 18% ;
+    }
+
+    .nav{
+      background-color: rgb(171, 168, 168);
+      grid-area: nav;
+      padding: 1em;
+      font-size: 100%;
+    }
+    
+    .footer{
+      grid-area: footer;
+      background: rgb(221, 221, 221);
+      padding: 1em;
+      font-size: 100%;
+    }
+
+    .article{
+      grid-area: article;
+      padding: 1em;
+      background-color: rgb(203, 200, 206);
+      font-size: 100%;
+    }
+
+    .aside{
+      grid-area: aside;
+      padding: 1em;
+      font-size: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="article">Article</div>
+  <div class="nav">Navigation</div>
+  <div class="aside">Aside</div>
+  <div class="footer">Footer</div>
+</body>
