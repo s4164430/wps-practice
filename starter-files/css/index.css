@@ -1,0 +1,27 @@
+.fun-fact-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: orange;
+  padding: 20px;
+}
+
+.fun-fact-text {
+  font-size: 22px;
+  color: #666;
+  text-align: justify;
+  padding: 20px;
+}
+
+.title {
+  color: #84594a;
+  font-weight: bold;
+}
+
+#main div {
+  border: 1px solid #84594a;
+}
+
+/* Add your styles here to layout the main section of the page */
+
+
