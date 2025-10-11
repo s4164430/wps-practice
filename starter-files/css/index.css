@@ -24,4 +24,11 @@
 
 /* Add your styles here to layout the main section of the page */
 
+#main{
+  display: grid;
+  gap: 1vh;
+}
 
+.ff1{
+
+}
