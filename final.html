@@ -177,3 +177,25 @@
       <ul id="wishlistItems"></ul>
     </div>
   </div>
+
+  <script>
+    function calculateTotal() {
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const price = parseFloat(document.getElementById('product').value);
+      const total = (quantity * price).toFixed(2);
+      document.getElementById('totalOutput').textContent = `Total Price: $${total}`;
+    }
+
+    function addToWishlist() {
+      const input = document.getElementById('wishlistInput');
+      const item = input.value.trim();
+      if (item) {
+        const li = document.createElement('li');
+        li.textContent = item;
+        document.getElementById('wishlistItems').appendChild(li);
+        input.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
