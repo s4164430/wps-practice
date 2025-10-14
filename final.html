@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Store Challenge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 15px;
+    }
+
+    .product-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0077cc;
+    }
+
+    .product-card p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px 16px;
+      font-size: 14px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    #totalOutput {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    ul#wishlistItems {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    ul#wishlistItems li {
+      background-color: #e0f0ff;
+      padding: 6px 10px;
+      margin-bottom: 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Product Store Challenge</h1>
+
+    <div class="product-gallery">
+      <div class="product-card">
+        <h3>Laptop</h3>
+        <p>$999.99</p>
+        <p>High-performance laptop for professionals</p>
+      </div>
+      <div class="product-card">
+        <h3>Smartphone</h3>
+        <p>$699.99</p>
+        <p>Latest model with amazing features</p>
+      </div>
+      <div class="product-card">
+        <h3>Headphones</h3>
+        <p>$199.99</p>
+        <p>Premium noise-cancelling headphones</p>
+      </div>
+      <div class="product-card">
+        <h3>Tablet</h3>
+        <p>$499.99</p>
+        <p>Perfect for work and entertainment</p>
+      </div>
+      <div class="product-card">
+        <h3>Smartwatch</h3>
+        <p>$299.99</p>
+        <p>Track your fitness and stay connected</p>
+      </div>
+      <div class="product-card">
+        <h3>Camera</h3>
+        <p>$799.99</p>
+        <p>Capture stunning photos and videos</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Calculate Total Price</h2>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1" />
+
+      <label for="product">Product:</label>
+      <select id="product">
+        <option value="999.99">Laptop - $999.99</option>
+        <option value="699.99">Smartphone - $699.99</option>
+        <option value="199.99">Headphones - $199.99</option>
+        <option value="499.99">Tablet - $499.99</option>
+        <option value="299.99">Smartwatch - $299.99</option>
+        <option value="799.99">Camera - $799.99</option>
+      </select>
+
+      <button onclick="calculateTotal()">Calculate Total</button>
+      <p id="totalOutput"></p>
+    </div>
+
+    <div class="section">
+      <h2>My Wishlist</h2>
+      <label for="wishlistInput">Enter product name:</label>
+      <input type="text" id="wishlistInput" />
+      <button onclick="addToWishlist()">Add to Wishlist</button>
+
+      <ul id="wishlistItems"></ul>
+    </div>
+  </div>
